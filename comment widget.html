@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    *{
+        margin-left: 50;
+    }
+    #writecomment{
+        resize: none;
+    }
+</style>
+<body>
+<div class="header"> <h3>Mikaeel Ezaz Khan</h3></div>
+<img src="./WhatsApp Image 2022-07-29 at 10.57.31 PM .jpeg" alt="MK" width="150px" height="200px">
+<!--increment of likes-->
+<div class="likedisplay">0</div>
+<!--buttons like and comment-->
+<div class="buttons">
+<button id="like" >Like</button>
+<button id="comment">Comment</button>
+</div>
+<br>
+<textarea id="writecomment" placeholder="Write a comment..."></textarea>
+<div class="finalcomment">
+</div>
+
+
+
+
+    <!--
+    <div id="finalcomment" ></div>
+    <br>
+    <div id="display"> 
+        <input type="text" id="text1">
+    </div>
+    <button id="btn" onclick="update()">COMMENT</button>
+    <h2>
+        All Comments
+    </h2>
+    <div id="commentf">
+        <ul> 
+            <li>
+                <div id="first">first comment</div>
+            </li>
+            <button onclick="reply()">Reply</button>
+        </ul>
+    </div>
+    -->
+
+    <script>
+
+      likedisplay1=document.querySelector(".likedisplay");
+      like1=document.getElementById("like");
+      comment1=document.getElementById("comment");
+      writecomment1=document.getElementById("writecomment");
+      finalcomment1=document.querySelector(".finalcomment");
+
+      let xlike=0;
+      //there are two ways of writing function
+      //when define button onclick it gets=== button onclick
+      like1.addEventListener("click", function(){
+          xlike=xlike+1
+         
+          likedisplay1.textContent = xlike;
+      });
+
+
+      //for comment section
+      
+      comment1.addEventListener("click", function(){
+          var newMessage = document.createElement("p")
+          newMessage.innerHTML = writecomment1.value 
+          finalcomment1.appendChild(newMessage);
+      });
+
+      
+
+
+
+        
+        /*
+
+        displayf=document.getElementById('display')
+        commentff= document.getElementById('commentf')
+        firstf=document.getElementById('first')
+        txt=document.getElementById('text1')
+        button=document.getElementById('btn')
+        finalc=document.getElementById('finalcomment')
+        
+
+        function update(){
+            var newMessage= document.createElement("ol")
+            newMessage.innerHTML = txt.value;
+            finalc.appendChild(newMessage);
+        };
+        */
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
